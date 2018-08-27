@@ -16,7 +16,6 @@ class AdminDatabaseSeeder extends Seeder
      */
     public function run()
     {
-        $this->seed('DatabaseFromDumpSeeder');
         $this->seed('DataTypesTableSeeder');
         $this->seed('DataRowsTableSeeder');
         $this->seed('MenusTableSeeder');

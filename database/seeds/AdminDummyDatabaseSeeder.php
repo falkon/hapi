@@ -16,6 +16,7 @@ class AdminDummyDatabaseSeeder extends Seeder
      */
     public function run()
     {
+		$this->seed('DatabaseFromDumpSeeder');
         $this->seed('CategoriesTableSeeder');
         $this->seed('UsersTableSeeder');
         $this->seed('PostsTableSeeder');
