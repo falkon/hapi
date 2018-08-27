@@ -106,45 +106,45 @@ class ExcelController extends Controller
                 $arrayImages = explode('/', $collect[10]);
                 if($arrayImages[0]) {
                     $arrayImages[0] = str_replace(array("\r","\n"),"", $arrayImages[0]);
-                    if(file_exists(storage_path('app/public/parser/').$arrayImages[0])) {
+                    if(file_exists(storage_path('parser/').$arrayImages[0])) {
                         if(strpos($arrayImages[0], '.') !== false) {
-                            if(!file_exists(storage_path('app/public/products/').$arrayImages[0])) {
-                                Storage::copy('/storage/parser/'.$arrayImages[0], '/storage/products/'.$arrayImages[0]);
+                            if(!file_exists(storage_path('products/').$arrayImages[0])) {
+                                Storage::copy('parser/'.$arrayImages[0], 'products/'.$arrayImages[0]);
 
                             }
                             $product->image = 'products/'.$arrayImages[0];
-                             
+
                         }
-                       
+
                     }
-                    
+
                     unset($arrayImages[0]);
                 }
 
                 if($arrayImages) {
                     foreach ($arrayImages as $key => $img) {
                         $img = str_replace(array("\r","\n"),"", $img);
-                        if(file_exists(storage_path('app/public/parser/').$img)) {
+                        if(file_exists(storage_path('parser/').$img)) {
                             if(strpos($img, '.') !== false) {
-                                if(!file_exists(storage_path('app/public/products/').$img)) {
-                                    Storage::copy('/storage/parser/'.$img, '/storage/products/'.$img);
+                                if(!file_exists(storage_path('products/').$img)) {
+                                    Storage::copy('parser/'.$img, 'products/'.$img);
                                 }
 
                                 $arrayImages[$key] = '/products/'.$img;
-                                
+
                             }
                             else {
                                 unset($arrayImages[$key]);
                                 continue;
                             }
-                            
 
-                            
+
+
                         }
                         else {
                             unset($arrayImages[$key]);
                         }
-                        
+
                     }
                     $multiImages = json_encode($arrayImages);
                     $product->images = $multiImages;
@@ -218,10 +218,10 @@ class ExcelController extends Controller
                     }
 
                 }
-                
+
 
             }
-            
+
             dd('good_job');
 
 

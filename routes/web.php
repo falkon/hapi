@@ -60,7 +60,7 @@ Route::post('/save-application', [
 
 Route::match(['get', 'post'], '/excel-download', [
     'uses' => 'ExcelController@excel'
-]);
+])->middleware('auth');
 
 Route::post('/change-price', [
     'uses' => 'OrderController@changePrice'

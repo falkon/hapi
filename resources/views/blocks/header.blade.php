@@ -33,7 +33,7 @@
           </span>
                         <span class="header__logo-inner">
             <span class="header__logo-name">ХАПИ ПОДАРКИ</span>
-            <span class="header__logo-city">Санкт-Петербург</span>
+            <span class="header__logo-city">Рязань</span>
           </span>
                     </a>
                 </div>

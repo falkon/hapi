@@ -202,9 +202,16 @@ class OrderController extends Controller
 
         Mail::send('apllication-mail', array('application' => $application), function($message) use($application)
         {
-            $message->from(setting('.mail_manager'));
+			$message->from(setting('.mail_manager'));
             $message->to(setting('.mail_manager'))->subject('Заказ № '. $application->id);
         });
+
+		if( count(Mail::failures()) > 0 ) {
+			echo "<br />";
+			echo "Errors: " . "<br />";
+			print_r(Mail::failures());
+		}
+
 
         return 1;
     }

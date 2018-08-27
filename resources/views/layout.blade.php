@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/main.css?v=1.0.1">
 </head>
 <body class="">
 <script>
@@ -113,9 +113,16 @@
     @yield('content')
     <div class="reviews">
         <div class="container">
-            <span class="reviews__title">Отзывы</span>
+            <span class="reviews__title">Присоединяйтесь к нашему сообществу, заказывайте и получайте скидки!</span>
             <div class="reviews__holder">
-                <div class="reviews__left">
+				<script type="text/javascript" src="https://vk.com/js/api/openapi.js?159"></script>
+
+					<!-- VK Widget -->
+					<div id="vk_groups"></div>
+					<script type="text/javascript">
+					VK.Widgets.Group("vk_groups", {mode: 3, width: "auto"}, 48723947);
+				</script>
+                {{-- <div class="reviews__left">
                     <div class="reviews__item">
 					<span class="reviews__item-icon">
 						<svg class="icon-quote">
@@ -270,7 +277,7 @@
                         </ul>
                     </div>
 
-                </div>
+                </div> --}}
             </div>
         </div>
     </div>
@@ -295,14 +302,28 @@
                                     <div class="help__form-col">
                                         <select name="whom" class="js-select" data-placeholder="Кому">
                                             <option></option>
-                                            <option value="Себе">Себе</option>
+                                            <option value='Секрет'>Секрет</option>
+                                            <option value='Подруге'>Подруге</option>
+                                            <option value='Другу'>Другу</option>
+                                            <option value='Жене'>Жене</option>
+                                            <option value='Мужу'>Мужу</option>
+                                            <option value='Сыну'>Сыну</option>
+                                            <option value='Дочке'>Дочке</option>
+                                            <option value='Маме'>Маме</option>
+                                            <option value='Папе'>Папе</option>
+                                            <option value='Любому'>Любому</option>
+                                            <option value='Себе'>Себе</option>
                                         </select>
                                     </div>
                                     <div class="help__form-col">
                                         <select name="reason" class="js-select" data-placeholder="Повод">
                                             <option></option>
-                                            <option value="Без повода">Без повода</option>
-
+                                            <option value="Просто так">Просто так</option>
+                                            <option value="День рождения">День рождения</option>
+                                            <option value="Свадьба">Свадьба</option>
+                                            <option value="День святого Валентина">День святого Валентина</option>
+                                            <option value="Новый год">Новый год</option>
+                                            <option value="8 марта">8 марта</option>
                                         </select>
                                     </div>
                                 </div>
@@ -310,21 +331,32 @@
                                     <div class="help__form-col">
                                         <select name="price" class="js-select" data-placeholder="Бюджет">
                                             <option></option>
-                                            <option value="1000">1000</option>
-                                            <option value="2000">2000</option>
-                                            <option value="3000">3000</option>
-                                            <option value="4000">4000</option>
-                                            <option value="5000">5000</option>
+                                            <option value="500р">500р</option>
+                                            <option value="1000р">1000р</option>
+                                            <option value="1500р">1500р</option>
+                                            <option value="2000р">2000р</option>
+                                            <option value="2500р">2500р</option>
+                                            <option value="3000р">3000р</option>
+                                            <option value="5000р">5000р</option>
+                                            <option value="10000р">10000р</option>
+                                            <option value="15000р">15000р</option>
+                                            <option value="20000р">20000р</option>
                                         </select>
                                     </div>
                                     <div class="help__form-col">
                                         <select name="growth" class="js-select" data-placeholder="Рост">
                                             <option></option>
-                                            <option value="1">1</option>
-                                            <option value="2">2</option>
-                                            <option value="3">3</option>
-                                            <option value="4">4</option>
-                                            <option value="5">5</option>
+                                            <option value="до 120см">до 120см</option>
+                                            <option value="до 130см">до 130см</option>
+                                            <option value="до 140см">до 140см</option>
+                                            <option value="до 150см">до 150см</option>
+                                            <option value="до 160см">до 160см</option>
+                                            <option value="до 170см">до 170см</option>
+                                            <option value="до 180см">до 180см</option>
+                                            <option value="до 190см">до 190см</option>
+                                            <option value="до 200см">до 200см</option>
+                                            <option value="до 210см">до 210см</option>
+                                            <option value="до 220см">до 220см</option>
                                         </select>
                                     </div>
                                 </div>
@@ -430,7 +462,7 @@
                     </div>
                     <div class="advantages__holder advantages__holder--large">
                         <span class="advantages__caption">Шоу-рум</span>
-                        <span class="advantages__desc">в центре Санкт-Петербурга</span>
+                        <span class="advantages__desc">в центре Рязани</span>
                     </div>
                 </li>
 

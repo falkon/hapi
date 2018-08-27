@@ -76,7 +76,7 @@ class CategoryController extends Controller
         $date = false;
 
         if($counter) {
-            
+
             $counterDate = date('Y-m-d', strtotime($counter->date));
             if(!$counter->hide_date) {
                 $counter->hide_date = $counterDate;
@@ -108,9 +108,9 @@ class CategoryController extends Controller
                 $date = $counter->hide_date.' '.$counter->hours;
             }
         }
-        
 
-        
+
+
 
 
         return view('category', compact('currentCategory', 'types', 'products', 'basketOrder', 'counter', 'priceWithoutDiscount', 'price', 'date', 'data'));
@@ -151,7 +151,7 @@ class CategoryController extends Controller
     public function infoProduct(Request $request) {
         $product = Product::find($request->productId);
         $product->image = '/storage/'.$product->image;
-        $product->images = json_decode($product->images);
+        $product->images = (array)json_decode($product->images);
         if(count($product->prices)) {
             $price = Price::find($request->priceId);
             if($price->image) {

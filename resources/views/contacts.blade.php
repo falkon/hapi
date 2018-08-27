@@ -11,7 +11,7 @@
                 <div class="shares__info">
                     <div class="shares__info-holder">
                         <div class="shares__info-header">
-                            <span class="shares__info-title">Мы из Санкт-Петербурга!</span>
+                            <span class="shares__info-title">Мы из Рязани!</span>
                             <span class="shares__info-title">Весь товар в наличии в шоу-руме в центре города!</span>
                         </div>
                         <ul class="shares__info-list">
@@ -135,7 +135,7 @@
                 <div class="social__item">
                     <div class="social__inner">
                         <div class="social__img-wrapp">
-                            <img src="pic/social/social-01.jpg" alt="">
+                            <img src="/social/social-01.jpg" alt="">
                         </div>
                         <div class="social__overflow-descr">
                             <div class="social__overflow-content">
@@ -155,7 +155,7 @@
                 <div class="social__item">
                     <div class="social__inner">
                         <div class="social__img-wrapp">
-                            <img src="pic/social/social-02.jpg" alt="">
+                            <img src="/social/social-02.jpg" alt="">
                         </div>
                         <div class="social__overflow-descr">
                             <div class="social__overflow-content">
@@ -171,7 +171,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="social__item">
+                <!--div class="social__item">
                     <div class="social__inner">
                         <div class="social__img-wrapp">
                             <img src="pic/social/social-03.jpg" alt="">
@@ -189,8 +189,8 @@
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="social__item">
+                </div-->
+                <!--div class="social__item">
                     <div class="social__inner">
                         <div class="social__img-wrapp">
                             <img src="pic/social/social-04.jpg" alt="">
@@ -209,7 +209,7 @@
 
                         </div>
                     </div>
-                </div>
+                </div-->
             </div>
         </div>
     </div>

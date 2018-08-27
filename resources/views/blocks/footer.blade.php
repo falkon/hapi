@@ -10,7 +10,7 @@
 					</span>
                     <span class="footer__logo-text">
    	       <span class="footer__logo-name">ХАПИ ПОДАРКИ</span>
-   	       <span class="footer__logo-city">Санкт-Петербург</span>
+   	       <span class="footer__logo-city">Рязань</span>
    	     </span>
                 </a>
             </div>
@@ -137,20 +137,20 @@
             <div class="footer__social">
                 <span class="footer__social-txt">Мы в соцсетях</span>
                 <ul class="footer__social-list">
-                    <li class="footer__social-item">
+                    {{-- <li class="footer__social-item">
                         <a href="{{ setting('.youtube') }}" class="footer__social-link">
                             <svg class="icon-youtube">
                                 <use xlink:href="#youtube"></use>
                             </svg>
                         </a>
-                    </li>
-                    <li class="footer__social-item">
+                    </li> --}}
+                    {{-- <li class="footer__social-item">
                         <a href="{{ setting('.facebook') }}" class="footer__social-link">
                             <svg class="icon-facebook">
                                 <use xlink:href="#facebook"></use>
                             </svg>
                         </a>
-                    </li>
+                    </li> --}}
                     <li class="footer__social-item">
                         <a href="{{ setting('.instagram') }}" class="footer__social-link">
                             <svg class="icon-instagram">
@@ -158,13 +158,13 @@
                             </svg>
                         </a>
                     </li>
-                    <li class="footer__social-item">
+                    {{-- <li class="footer__social-item">
                         <a href="{{ setting('.odnoklassniki') }}" class="footer__social-link">
                             <svg class="icon-odnoklassniki">
                                 <use xlink:href="#odnoklassniki"></use>
                             </svg>
                         </a>
-                    </li>
+                    </li> --}}
                     <li class="footer__social-item">
                         <a href="{{ setting('.vk_link') }}" class="footer__social-link">
                             <svg class="icon-vk">
@@ -176,9 +176,39 @@
             </div>
             <div class="footer__copy">
 				<span class="footer__copy-txt">
-					ООО "Подарки Санкт-Петербург" &copy; Все права защищены, 2018.<span> Сайт не является публичной офертой.</span>
+					ООО "Подарки Рязань" &copy; Все права защищены, 2018.<span> Сайт не является публичной офертой.</span>
 				</span>
             </div>
         </div>
     </div>
 </footer>
+
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript" >
+    (function (d, w, c) {
+        (w[c] = w[c] || []).push(function() {
+            try {
+                w.yaCounter44625862 = new Ya.Metrika({
+                    id:44625862,
+                    clickmap:true,
+                    trackLinks:true,
+                    accurateTrackBounce:true,
+                    webvisor:true
+                });
+            } catch(e) { }
+        });
+
+        var n = d.getElementsByTagName("script")[0],
+            s = d.createElement("script"),
+            f = function () { n.parentNode.insertBefore(s, n); };
+        s.type = "text/javascript";
+        s.async = true;
+        s.src = "https://mc.yandex.ru/metrika/watch.js";
+
+        if (w.opera == "[object Opera]") {
+            d.addEventListener("DOMContentLoaded", f, false);
+        } else { f(); }
+    })(document, window, "yandex_metrika_callbacks");
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/44625862" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
