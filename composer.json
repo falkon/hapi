@@ -7,7 +7,7 @@
     "repositories": [
         {
             "type": "vcs",
-            "url": "https://github.com/johny-catsvill/laraveladminpanel-magazine.git"
+            "url": "https://github.com/falkon/hapi-magazine.git"
         }
     ],
     "require": {
@@ -15,7 +15,7 @@
         "cyber-duck/laravel-excel": "^1.2",
         "fideloper/proxy": "^4.0",
         "guzzlehttp/guzzle": "~6.0",
-        "johny-catsvill/laraveladminpanel-magazine": "dev-master",
+        "falkon/hapi-magazine": "dev-master",
         "laravel/framework": "5.6.*",
         "laravel/tinker": "^1.0",
         "maatwebsite/excel": "^3.0"
